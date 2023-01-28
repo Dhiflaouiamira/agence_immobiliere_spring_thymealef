@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head >
+<title>LUXURY HOUSE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+crossorigin="anonymous">
+</head>
+<body>
+  
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>LH</b>LUXURY HOUSE</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+          <a th:href="@{/home}"  class="w3-bar-item w3-button">Home</a>
+        <a th:href="@{/users}"  class="w3-bar-item w3-button">Users</a>
+      <a th:href="@{/reservations}"  class="w3-bar-item w3-button">Reservations</a>
+     <a th:href="@{/reclamations}"    class="w3-bar-item w3-button"     >Reclamations</a>
+      <a th:href="@{/bienImmobiliers}" class="w3-bar-item w3-button">BienImmobiliers</a>
+    
+      <a th:href="@{/}" class="w3-bar-item w3-button">Signout</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="https://medias.residences-immobilier.com/pict/f1200x800/3/0/7/5/ext_0_3075256.jpg?t=1674609664" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>LH</b></span> <span class="w3-hide-small w3-text-Blue-Gray">LUXURY HOUSE</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  
+  
+
+</div>
+
+
+
+</body>
+</html>

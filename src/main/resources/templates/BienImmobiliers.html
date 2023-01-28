@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>LUXURY HOUSE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+crossorigin="anonymous">
+</head>
+<body>
+  
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>LH</b>LUXURY HOUSE</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+          <a th:href="@{/home}"  class="w3-bar-item w3-button">Home</a>
+        <a th:href="@{/users}"  class="w3-bar-item w3-button">Users</a>
+      <a th:href="@{/reservations}"  class="w3-bar-item w3-button">Reservations</a>
+     <a th:href="@{/reclamations}"    class="w3-bar-item w3-button"     >Reclamations</a>
+      <a th:href="@{/bienImmobiliers}" class="w3-bar-item w3-button">BienImmobilier</a>
+    <a th:href="@{/}" class="w3-bar-item w3-button">Signout</a>
+   
+    </div>
+  </div>
+</div>
+
+
+   <div class ="container">
+   <div class = "row">
+			<h1> List BienImmobiliers </h1>
+		</div>
+		
+		<div class = "row">
+			<h1> List BienImmobiliers </h1>
+		</div>
+		
+		
+		<div class = "row">
+			<div class = "col-lg-3">
+				<a th:href = "@{/bienImmobiliers/new}" class = "btn btn-primary btn-sm mb-3"> Add BienImmobiliers</a>
+			</div>
+		</div>
+		 
+		
+  
+		<table class = "table table-striped table-bordered">
+			<thead class = "table-dark">
+				<tr>
+				
+					<th> bienImmobilier id</th>
+					<th> bienImmobilier Name</th>
+					<th>  bienImmobilier adress </th>
+					<th> bienImmobilier nbPieces</th>
+					<th>  bienImmobilier description</th>
+				    <th>  bienImmobilier Contact </th>
+				
+					<th>  bienImmobilier Type </th>
+					<th> Actions </th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr th:each = "bienImmobilier: ${bienImmobiliers}">
+				
+				
+			     	<td th:text = "${bienImmobilier.id}"></td>
+                    <td th:text = "${bienImmobilier.name}"></td>	
+					<td th:text = "${bienImmobilier.address}"></td>
+					<td th:text = "${bienImmobilier.nbPieces}"></td>
+					<td th:text = "${bienImmobilier.description}"></td>
+				    <td th:text = "${bienImmobilier.Contact}"></td>
+			 <td th:text = "${bienImmobilier.Type}"></td>
+				
+														
+					<td>
+						<a th:href = "@{/bienImmobiliers/edit/{id}(id=${bienImmobilier.id})}"
+						 class = "btn btn-primary">Update</a>
+						
+						<a th:href = "@{/bienImmobiliers/{id}(id=${bienImmobilier.id})}"
+						 class = "btn btn-danger">Delete</a>
+						 
+					</td> 
+				</tr>
+			</tbody>
+		
+		</table>
+		</div>
+				 <div class="w3-row-padding">
+  
+
+		
+
+  <div class="w3-container w3-padding-32" id="projects">
+  
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">VILLA LOUISE</div>
+        <img src="https://medias.residences-immobilier.com/pict/f600x400/3/0/6/4/ext_18_3064593.jpg?t=1673368523" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">PROVENÇALE RÉNOVÉE</div>
+        <img src="https://medias.residences-immobilier.com/pict/f1200x800/2/9/6/7/ext_0_2967110.jpg?t=1665407593" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">PANORAMA</div>
+        <img src="https://medias.residences-immobilier.com/pict/f1200x800/2/8/4/4/ext_2_2844370.jpg?t=1668006779" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">PANORAMA</div>
+        <img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Summer House</div>
+        <img src="https://www.w3schools.com/w3images/house2.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Brick House</div>
+        <img src="https://www.w3schools.com/w3images/house5.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Renovated</div>
+        <img src="https://www.w3schools.com/w3images/house4.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding">Barn House</div>
+        <img src="https://www.w3schools.com/w3images/house3.jpg" alt="House" style="width:99%">
+      </div>
+    </div>
+	<!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="reservations" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="reservations" class="w3-bar-item w3-black w3-button">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+</div>

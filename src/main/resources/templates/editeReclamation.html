@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>LUXURY HOUSE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+crossorigin="anonymous">
+</head>
+<body>
+  
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>LH</b>LUXURY HOUSE</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+          <a th:href="@{/home}"  class="w3-bar-item w3-button">Home</a>
+     <a th:href="@{/users}"  class="w3-bar-item w3-button">Users</a>
+      <a th:href="@{/reservations}"  class="w3-bar-item w3-button">Reservations</a>
+     <a th:href="@{/reclamations}"    class="w3-bar-item w3-button"     >Reclamations</a>
+      <a th:href="@{/bienImmobiliers}" class="w3-bar-item w3-button">BienImmobilier</a>
+      <a th:href="@{/}" class="w3-bar-item w3-button">Signout</a>
+    
+    </div>
+  </div>
+</div>
+
+  
+    <h1  class = "text-center">   Create new Reclamation   </h1>  
+     <div class =  "container">
+      <div class = "row">
+        <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center-center card ">
+        <h1  class = "text-center">   Create new Reclamation   </h1>  
+        <div class = "card-body">
+        
+          <form th:action= "@{/reclamations}" th:object="${ reclamation}" method="POST">
+          
+          
+            <div Class ="form-group"    >
+           <label>  Reclamation  Type </label>
+             <input   type = "text"
+            name= "type "
+               th:field="${reclamation.TypeR}"
+             class = "form-control"
+             placeholder=" Enter reclamation type "
+             />
+             </div>
+             
+             
+             <div Class ="form-group"    >
+           <label>  Reclamation  description </label>
+            <input   type = "text"
+             name="description"
+             th:field="${reclamation.description}"
+           
+             class = "form-control"
+             placeholder=" Enter reclamation description "
+             />
+             </div>
+              
+           
+              <div Class ="form-group"    >
+           <label>  Reclamation  user </label>
+           
+           <select class="form-control" required>
+                 <th:block th:each="cat : ${listUsers}">
+                 <option th:text= "${cat.firstName}" th:value="${cat.id}" />
+                 </th:block>
+           </select>
+           
+             </div>
+             
+             
+             
+            
+          <div class = "box-footer">
+          
+           <button type="submit" class ="btn btn-primary">
+           Submit
+           </button>
+          </div> 
+          </form>
+        </div>
+        </div>
+         </div>
+          </div>
+</body>
+</html>

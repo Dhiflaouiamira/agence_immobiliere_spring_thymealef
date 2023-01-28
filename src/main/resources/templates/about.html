@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>LUXURY HOUSE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+crossorigin="anonymous">
+</head>
+
+
+
+<body>
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>LH</b>LUXURY HOUSE</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+          <a th:href="@{/home}"  class="w3-bar-item w3-button">Home</a>
+    
+      <a th:href="@{/projects}"  class="w3-bar-item w3-button">Projects</a>
+     <a th:href="@{/about}"    class="w3-bar-item w3-button"     >About Us </a>
+      <a th:href="@{/contact}" class="w3-bar-item w3-button">Contact US</a>
+      <a th:href="@{/register}" class="w3-bar-item w3-button">Registre</a>
+      <a th:href="@{/login}" class="w3-bar-item w3-button">Login</a>
+    </div>
+  </div>
+</div>
+ <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>Selon votre situation, la location est peut-être la formule la plus adaptée à vos besoins. Louer c'est profiter d'un bien en assumant
+  une part moindre de son entretient et des contriantes administratives qui y sont liées. Encore faut-il être sûr que le suivi soit assuré.
+  En passant par notre agence, vous vous assurez un suivi de qualité, nos professionnels se chargeront des relations avec le propriétaire
+dans l'intérêt de tous. N'attendez plus et découvrez nos biens à la location
+    </p>
+  </div>
+
+ 
+ 
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/323445579_1225703874706378_6775240687601778869_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=pnql_ZsV-ysAX8mOnbW&_nc_ht=scontent.ftun8-1.fna&oh=00_AfDLo9W0OsACGmn50sSzRZBIeTGDAVg0k4ZfoHmEISm8Iw&oe=63D711D6" alt="Amira" style="width:100%">
+      <h3>Dhiflaoui Amira</h3>
+      <p class="w3-opacity">CEO & Founder</p>
+      
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+
+    
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/323441419_1361116174658430_6329831408277509210_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=CxFmK5UhYaQAX9oPxLn&_nc_ht=scontent.ftun8-1.fna&oh=00_AfDSc9TM-JfgSkjcKwG5JYC-oDh0sF-RJqnuX-RLlM-MKA&oe=63D6CB87" alt="Cyrine" style="width:100%">
+      <h3>Cyrine Hssni</h3>
+      <p class="w3-opacity">Architect</p>
+   
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    
+    
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/324889107_712914933764513_8156860599374291677_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=uQl4F474dKIAX9zV1P6&_nc_ht=scontent.ftun8-1.fna&oh=00_AfAFYhVI-RQ2XawgssoI3RLmDf9ENYAV_qHYdimkEpERPQ&oe=63D6DB10" alt="Manel" style="width:100%">
+      <h3>Manel ouni</h3>
+      <p class="w3-opacity">Architect</p>
+  
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+   
+  </div>
+</body>
+</html>
